@@ -10,7 +10,7 @@ export const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         //const socketInstance = io("http://localhost:5000");
-        const socketInstance = io("http://34.132.67.217:5000");
+        const socketInstance = io("https://course-app-backend-8bbj.onrender.com");
         setSocket(socketInstance);
 
         return () => {

@@ -4,7 +4,9 @@ export const loginStudent = createAsyncThunk(
     "student/loginStudent",
     async ({ username, password }) => {
         //const response = await fetch(`http://localhost:5000/students/${username}`);
-        const response = await fetch(`http://34.132.67.217:5000/students/${username}`);
+        const response = await fetch(
+            `https://course-app-backend-8bbj.onrender.com/students/${username}`
+        );
         const student = await response.json();
         if (student && student.password === password) {
             return student;
